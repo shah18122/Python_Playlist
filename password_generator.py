@@ -7,4 +7,8 @@ password = ''
 for i in range(12):
     password += str(random.choice(list))
 
+site: str = input("Enter the site name: ")
 print(password)
+
+with open('passwords.txt', 'a') as file:
+    file.write(site + ' : ' + password + '\n')  
